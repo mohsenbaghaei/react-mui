@@ -3,6 +3,7 @@ import "./App.css";
 const MuiTypography = lazy(() => import("./components/MuiTypography"));
 const MuiButton = lazy(() => import("./components/MuiButton"));
 const MuiTextField = lazy(() => import("./components/MuiTextField"));
+const MuiSelect = lazy(() => import("./components/MuiSelect"));
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <MuiTypography />
         <MuiButton />
         <MuiTextField />
+        <MuiSelect />
       </Suspense>
     </div>
   );

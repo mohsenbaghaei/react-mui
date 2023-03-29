@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-// gutterBottom === it will add margin to the bottom 
+// gutterBottom === it will add margin to the bottom
 
 const MuiTypography = () => {
   return (

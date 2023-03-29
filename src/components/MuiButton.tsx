@@ -15,20 +15,25 @@ import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
 
 import { useState } from "react";
 
-// disableRipple === it disales the animation of click
+//  === it disales the animation of click
 
 const MuiButton = () => {
+  const [formats, setFormats] = useState<string[]>([]);
+  const [formats2, setFormats2] = useState<string | null>(null);
 
-    const [formats, setFormats] = useState<string[]>([])
-    const [formats2, setFormats2] = useState<string | null>(null)
+  const handleFormatChange = (
+    event: React.MouseEvent<HTMLElement>,
+    updateFormats: string[]
+  ) => {
+    setFormats(updateFormats);
+  };
 
-    const handleFormatChange = (event : React.MouseEvent<HTMLElement>, updateFormats: string[]) => {
-        setFormats(updateFormats)
-    }
-
-    const handleFormatChange2 = (event : React.MouseEvent<HTMLElement>, updateFormats: string | null) => {
-        setFormats2(updateFormats)
-    }
+  const handleFormatChange2 = (
+    event: React.MouseEvent<HTMLElement>,
+    updateFormats: string | null
+  ) => {
+    setFormats2(updateFormats);
+  };
 
   return (
     <Stack spacing={4}>
@@ -143,7 +148,11 @@ const MuiButton = () => {
       </Stack>
 
       <Stack direction="row">
-        <ToggleButtonGroup aria-label="text formating" value={formats} onChange={handleFormatChange}>
+        <ToggleButtonGroup
+          aria-label="text formating"
+          value={formats}
+          onChange={handleFormatChange}
+        >
           <ToggleButton value="bold">
             <FormatBoldSharpIcon />
           </ToggleButton>
@@ -157,7 +166,12 @@ const MuiButton = () => {
       </Stack>
 
       <Stack direction="row">
-        <ToggleButtonGroup aria-label="text formating" value={formats2} onChange={handleFormatChange2} exclusive>
+        <ToggleButtonGroup
+          aria-label="text formating"
+          value={formats2}
+          onChange={handleFormatChange2}
+          exclusive
+        >
           <ToggleButton value="bold">
             <FormatBoldSharpIcon />
           </ToggleButton>
