@@ -7,6 +7,7 @@ const MuiSelect = lazy(() => import("./components/MuiSelect"));
 const MuiRadioGroup = lazy(() => import("./components/MuiRadioButton"));
 const MuiCheckBox = lazy(() => import("./components/MuiCheckBox"));
 const MuiSwitch = lazy(() => import("./components/MuiSwitch"));
+const MuiRaiting = lazy(() => import("./components/MuiRating"));
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <MuiSelect />
         <MuiRadioGroup />
         <MuiCheckBox />
-        <MuiSwitch/>
+        <MuiSwitch />
+        <MuiRaiting />
       </Suspense>
     </div>
   );
